@@ -1,14 +1,14 @@
-import React, { ReactNode, useContext, useEffect, useMemo, useRef } from "react";
-import * as d3 from "d3";
-import { observer } from "mobx-react-lite";
+import React, { ReactNode, useContext, useEffect, useMemo, useRef } from 'react';
+import * as d3 from 'd3';
+import { observer } from 'mobx-react-lite';
 
-import Axes from "../Axes/Axes";
-import Curves from "../Curves/Curves";
-import { D3SVGModel } from "../D3SVGModel";
-import { PointType } from "../Points/Point/Point";
-import Points from "../Points/Points";
+import Axes from '../Axes/Axes';
+import Curves from '../Curves/Curves';
+import { D3SVGModel } from '../D3SVGModel';
+import { PointType } from '../Points/Point/Point';
+import Points from '../Points/Points';
 
-import "./D3SVG.css";
+import './D3SVG.css';
 
 type uomType = {
   quantity: number;
@@ -101,24 +101,23 @@ const D3SVG = observer((svgProps: D3SVGProps) => {
   const svg = d3.select(svgRef.current);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const D3Store = useMemo(() => new D3SVGModel(svgProps, svg), [svgProps, svgRef.current]);
-
+  const D3Store = new D3SVGModel(svgProps, svg);
 
   return (
-      <svg className={'chartContainer'} ref={svgRef} width={svgProps.width} height={svgProps.height}>
-        <D3Context.Provider value={D3Store}>
-          <Axes></Axes>
-          <Curves></Curves>
-          <Points></Points>
-        </D3Context.Provider>
-      </svg>
+    <svg className={'chartContainer'} ref={svgRef} width={svgProps.width} height={svgProps.height}>
+      <D3Context.Provider value={D3Store}>
+        <Axes></Axes>
+        <Curves></Curves>
+        <Points></Points>
+      </D3Context.Provider>
+    </svg>
   );
 });
 
 const useD3Context = () => {
   const context = useContext(D3Context);
   if (context === null) {
-    console.assert("Контекст не указан");
+    console.assert('Контекст не указан');
   }
   return context!;
 };
