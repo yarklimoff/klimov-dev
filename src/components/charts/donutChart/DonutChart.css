@@ -1,0 +1,40 @@
+.container {
+  position: relative;
+
+  .arc {
+    position: relative;
+  }
+
+  .middleText {
+    display: flex;
+  }
+}
+.middleText {
+
+  padding: auto;
+}
+
+.center-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  height: 100px;
+}
+
+.donutTooltip {
+  background-color: rgba(77, 87, 97, 1);
+  z-index: 1001;
+  border-radius: 8px;
+  padding: 8px 12px;
+  max-width: 190px;
+  opacity: 0;
+  overflow: hidden;
+  display: none;
+  font-family: "Inter";
+}
+
+.filter {
+  position: relative;
+}

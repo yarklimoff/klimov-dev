@@ -1,0 +1,38 @@
+.pieCenterInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card {
+  padding: 40px;
+  border: 2px solid black;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-3 {
+  font-weight: 700;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.d3_section {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  
+}
+
+.d3 {
+  background-color: white;
+}
+
+.title-2 {
+	text-align: center;
+}
