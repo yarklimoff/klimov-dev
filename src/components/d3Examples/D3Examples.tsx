@@ -32,19 +32,7 @@ const D3Examples = () => {
     <div className="d3">
       <div className="title-2">D3 examples</div>
       <div className="d3_section">
-        <div className="card">
-          <DonutChart data={dataDonut} innerRadius={innerRadius} outerRadius={outerRadius}>
-            <div className={'pieCenter'}>
-              <span className={'pieCenterInner'}>
-                {dataDonut.map((item, index) => (
-                  <div key={index}>
-                    {item.title}: {item.value}
-                  </div>
-                ))}
-              </span>
-            </div>
-          </DonutChart>
-        </div>
+        
         <div className="card">
           <D3SVG
             curves={[

@@ -26,7 +26,7 @@ const DonutChart: FC<DonutChartProps> = ({
     2 * (innerRadius * innerRadius - (centerElementHeight * centerElementHeight) / 4) ** 0.5;
   const pie = d3.pie();
   const data_ready = pie(data.map(({ value }) => value));
-  d3.select('foreignObject')
+  d3.selectAll('foreignObject')
     .attr('width', centerElementWidth)
     .attr('height', centerElementHeight)
     .attr(
